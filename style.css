@@ -1,0 +1,858 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c62828;
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+.logo span {
+    color: #222;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c62828;
+}
+
+
+/* ================= HOME ================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(100, 20, 20, 0.85),
+            rgba(20, 20, 20, 0.85)
+        ),
+        linear-gradient(135deg, #c62828, #263238);
+
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 30px;
+    z-index: 2;
+}
+
+.warning-icon {
+    font-size: 65px;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 30px;
+
+    background: white;
+    color: #c62828;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+    background: #ffebee;
+}
+
+
+/* Floating Icons */
+
+.floating-icon {
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    font-size: 30px;
+
+    animation: float 4s infinite ease-in-out;
+}
+
+.icon1 {
+    left: 8%;
+    top: 20%;
+}
+
+.icon2 {
+    right: 10%;
+    top: 18%;
+}
+
+.icon3 {
+    left: 15%;
+    bottom: 20%;
+}
+
+.icon4 {
+    right: 15%;
+    bottom: 25%;
+}
+
+.icon5 {
+    left: 45%;
+    top: 12%;
+}
+
+.icon6 {
+    right: 45%;
+    bottom: 10%;
+}
+
+
+/* ================= COMMON ================= */
+
+section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 750px;
+    margin: auto auto 50px;
+}
+
+.section-title span {
+    color: #c62828;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    margin: 12px 0;
+}
+
+.section-title p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    background: white;
+}
+
+.about-cards {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background: #f8f8f8;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.about-card i {
+    font-size: 45px;
+    color: #c62828;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* ================================================= */
+/* ================= DISASTERS ==================== */
+/* ================================================= */
+
+.disaster-section {
+    background: #f5f7fa;
+}
+
+
+/* Disaster Cards */
+
+.disaster-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.disaster-card {
+    min-height: 190px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.35s;
+}
+
+.disaster-card:hover {
+    transform: translateY(-10px);
+    border-color: #c62828;
+
+    box-shadow: 0 18px 40px rgba(198, 40, 40, 0.18);
+}
+
+.disaster-icon {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #ffebee;
+
+    color: #c62828;
+
+    font-size: 38px;
+
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+.disaster-card:hover .disaster-icon {
+    transform: scale(1.1);
+}
+
+.disaster-card h3 {
+    font-size: 22px;
+}
+
+.card-arrow {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    color: #aaa;
+
+    transition: 0.3s;
+}
+
+.disaster-card:hover .card-arrow {
+    color: #c62828;
+    transform: translateX(5px);
+}
+
+
+/* ================================================= */
+/* ============== DETAILS PAGE ==================== */
+/* ================================================= */
+
+#disaster-details {
+    display: none;
+}
+
+.details-page {
+    max-width: 1100px;
+    margin: auto;
+    animation: slideIn 0.5s ease;
+}
+
+
+/* Back Button */
+
+.back-btn {
+    border: none;
+
+    background: #263238;
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    margin-bottom: 35px;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #c62828;
+    transform: translateX(-5px);
+}
+
+
+/* Details Header */
+
+.details-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 35px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.large-disaster-icon {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffebee;
+
+    color: #c62828;
+
+    font-size: 45px;
+}
+
+.details-header span {
+    color: #c62828;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.details-header h2 {
+    font-size: 40px;
+    margin-top: 8px;
+}
+
+
+/* Description */
+
+.description-box {
+    display: flex;
+    gap: 20px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.box-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #e3f2fd;
+
+    color: #1976d2;
+
+    font-size: 25px;
+}
+
+.description-box h3 {
+    margin-bottom: 10px;
+}
+
+.description-box p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* Do's and Don'ts */
+
+.dos-donts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.safety-box {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.box-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.heading-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+.dos .heading-icon {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.donts .heading-icon {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.safety-box ul {
+    list-style: none;
+}
+
+.safety-box li {
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+
+    line-height: 1.5;
+}
+
+.dos li::before {
+    content: "✓";
+    color: #2e7d32;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.donts li::before {
+    content: "✕";
+    color: #c62828;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* Safety Tip */
+
+.safety-tip {
+    display: flex;
+
+    gap: 20px;
+
+    background: #fff8e1;
+
+    padding: 30px;
+
+    margin-top: 25px;
+
+    border-radius: 18px;
+
+    border-left: 5px solid #f9a825;
+}
+
+.tip-icon {
+    font-size: 35px;
+    color: #f9a825;
+}
+
+.safety-tip h3 {
+    margin-bottom: 8px;
+}
+
+.safety-tip p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* ================= PREPAREDNESS ================= */
+
+.preparedness {
+    background: white;
+}
+
+.preparedness-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.prepare-card {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #f7f7f7;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.prepare-card:hover {
+    transform: translateY(-7px);
+}
+
+.prepare-card i {
+    font-size: 40px;
+    color: #c62828;
+    margin-bottom: 18px;
+}
+
+.prepare-card h3 {
+    margin-bottom: 10px;
+}
+
+.prepare-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* ================= EMERGENCY ================= */
+
+.emergency {
+    background:
+        linear-gradient(
+            rgba(20, 20, 20, 0.92),
+            rgba(20, 20, 20, 0.92)
+        ),
+        #c62828;
+
+    color: white;
+
+    text-align: center;
+}
+
+.emergency-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.emergency-main-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.emergency h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.emergency p {
+    color: #ddd;
+    margin-bottom: 35px;
+}
+
+.emergency-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.emergency-items div {
+    padding: 25px;
+
+    background: rgba(255,255,255,0.1);
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.emergency-items i {
+    font-size: 30px;
+}
+
+.emergency-items strong {
+    font-size: 28px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111;
+
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    font-size: 25px;
+
+    color: #c62828;
+
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes slideIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .disaster-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .preparedness-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about-cards,
+    .disaster-grid,
+    .preparedness-grid,
+    .dos-donts,
+    .emergency-items {
+        grid-template-columns: 1fr;
+    }
+
+    .details-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .details-header h2 {
+        font-size: 30px;
+    }
+
+    .floating-icon {
+        display: none;
+    }
+
+}

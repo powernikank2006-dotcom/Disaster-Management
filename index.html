@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Disaster Management</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <i class="fa-solid fa-house-flood-water"></i>
+                Disaster<span>Care</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#disasters">Disasters</a></li>
+                <li><a href="#preparedness">Preparedness</a></li>
+                <li><a href="#emergency">Emergency</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="warning-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+
+            <h1>Disaster Management</h1>
+
+            <p>
+                Learn how to prepare for disasters, stay safe during
+                emergencies, and protect yourself and your community.
+            </p>
+
+            <a href="#disasters" class="hero-btn">
+                Explore Disasters
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="hero-icons">
+
+            <div class="floating-icon icon1">
+                <i class="fa-solid fa-house-crack"></i>
+            </div>
+
+            <div class="floating-icon icon2">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div class="floating-icon icon3">
+                <i class="fa-solid fa-fire"></i>
+            </div>
+
+            <div class="floating-icon icon4">
+                <i class="fa-solid fa-cloud-bolt"></i>
+            </div>
+
+            <div class="floating-icon icon5">
+                <i class="fa-solid fa-mountain"></i>
+            </div>
+
+            <div class="floating-icon icon6">
+                <i class="fa-solid fa-person-running"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about">
+
+        <div class="section-title">
+
+            <span>KNOW MORE</span>
+
+            <h2>About Disaster Management</h2>
+
+            <p>
+                Disaster management involves planning, preparing,
+                responding and recovering from natural and man-made disasters.
+            </p>
+
+        </div>
+
+
+        <div class="about-cards">
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>Protection</h3>
+
+                <p>
+                    Learn safety measures to protect yourself,
+                    your family and your community.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-people-group"></i>
+
+                <h3>Community</h3>
+
+                <p>
+                    Working together helps communities respond
+                    effectively during emergencies.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-kit-medical"></i>
+
+                <h3>Preparedness</h3>
+
+                <p>
+                    Being prepared before a disaster can save
+                    lives and reduce damage.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <h3>Emergency Response</h3>
+
+                <p>
+                    Quick and correct action is important
+                    during disaster situations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- ============== DISASTER LIST PAGE =============== -->
+    <!-- ================================================= -->
+
+    <section id="disasters" class="disaster-section">
+
+        <div id="disaster-list">
+
+            <div class="section-title">
+
+                <span>DISASTER MANAGEMENT</span>
+
+                <h2>Select a Disaster</h2>
+
+                <p>
+                    Click on a disaster to learn its Do's,
+                    Don'ts and safety measures.
+                </p>
+
+            </div>
+
+
+            <!-- ONLY DISASTER NAMES ARE SHOWN HERE -->
+
+            <div class="disaster-grid">
+
+
+                <!-- EARTHQUAKE -->
+
+                <div class="disaster-card earthquake"
+                     onclick="showDisaster('earthquake')">
+
+                    <div class="disaster-icon">
+                        <i class="fa-solid fa-house-crack"></i>
+                    </div>
+
+                    <h3>Earthquake</h3>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </div>
+
+
+                <!-- FLOOD -->
+
+                <div class="disaster-card flood"
+                     onclick="showDisaster('flood')">
+
+                    <div class="disaster-icon">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+
+                    <h3>Flood</h3>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </div>
+
+
+                <!-- FOREST FIRE -->
+
+                <div class="disaster-card forest-fire"
+                     onclick="showDisaster('forestfire')">
+
+                    <div class="disaster-icon">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+
+                    <h3>Forest Fire</h3>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </div>
+
+
+                <!-- CYCLONE -->
+
+                <div class="disaster-card cyclone"
+                     onclick="showDisaster('cyclone')">
+
+                    <div class="disaster-icon">
+                        <i class="fa-solid fa-hurricane"></i>
+                    </div>
+
+                    <h3>Cyclone</h3>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </div>
+
+
+                <!-- TSUNAMI -->
+
+                <div class="disaster-card tsunami"
+                     onclick="showDisaster('tsunami')">
+
+                    <div class="disaster-icon">
+                        <i class="fa-solid fa-house-tsunami"></i>
+                    </div>
+
+                    <h3>Tsunami</h3>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </div>
+
+
+                <!-- LANDSLIDE -->
+
+                <div class="disaster-card landslide"
+                     onclick="showDisaster('landslide')">
+
+                    <div class="disaster-icon">
+                        <i class="fa-solid fa-mountain"></i>
+                    </div>
+
+                    <h3>Landslide</h3>
+
+                    <i class="fa-solid fa-arrow-right card-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- ============== DISASTER DETAILS ================= -->
+        <!-- ================================================= -->
+
+        <div id="disaster-details" class="details-page">
+
+            <button class="back-btn" onclick="goBack()">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Disasters
+            </button>
+
+
+            <div class="details-header">
+
+                <div id="detail-icon" class="large-disaster-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+                    <span>DISASTER SAFETY GUIDE</span>
+
+                    <h2 id="detail-title">
+                        Disaster
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="description-box">
+
+                <div class="box-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+
+                <div>
+
+                    <h3>Description</h3>
+
+                    <p id="detail-description">
+                        Disaster description will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DO'S AND DON'TS -->
+
+            <div class="dos-donts">
+
+
+                <!-- DO'S -->
+
+                <div class="safety-box dos">
+
+                    <div class="box-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <h3>Do's</h3>
+
+                    </div>
+
+                    <ul id="detail-dos">
+                    </ul>
+
+                </div>
+
+
+                <!-- DON'TS -->
+
+                <div class="safety-box donts">
+
+                    <div class="box-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+
+                        <h3>Don'ts</h3>
+
+                    </div>
+
+                    <ul id="detail-donts">
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- SAFETY TIP -->
+
+            <div class="safety-tip">
+
+                <div class="tip-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div>
+
+                    <h3>Safety Tip</h3>
+
+                    <p id="detail-tip">
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PREPAREDNESS ================= -->
+
+    <section id="preparedness" class="preparedness">
+
+        <div class="section-title">
+
+            <span>BE READY</span>
+
+            <h2>Emergency Preparedness</h2>
+
+            <p>
+                Keep essential items ready before a disaster occurs.
+            </p>
+
+        </div>
+
+
+        <div class="preparedness-grid">
+
+
+            <div class="prepare-card">
+
+                <i class="fa-solid fa-kit-medical"></i>
+
+                <h3>First Aid Kit</h3>
+
+                <p>
+                    Keep medicines, bandages and essential
+                    medical supplies ready.
+                </p>
+
+            </div>
+
+
+            <div class="prepare-card">
+
+                <i class="fa-solid fa-bottle-water"></i>
+
+                <h3>Water</h3>
+
+                <p>
+                    Store sufficient clean drinking water
+                    for emergencies.
+                </p>
+
+            </div>
+
+
+            <div class="prepare-card">
+
+                <i class="fa-solid fa-battery-full"></i>
+
+                <h3>Power Bank</h3>
+
+                <p>
+                    Keep your mobile phone and emergency
+                    communication devices charged.
+                </p>
+
+            </div>
+
+
+            <div class="prepare-card">
+
+                <i class="fa-solid fa-radio"></i>
+
+                <h3>Emergency Radio</h3>
+
+                <p>
+                    Keep a battery-powered radio for
+                    emergency announcements.
+                </p>
+
+            </div>
+
+
+            <div class="prepare-card">
+
+                <i class="fa-solid fa-flashlight"></i>
+
+                <h3>Flashlight</h3>
+
+                <p>
+                    Keep a working flashlight and spare batteries.
+                </p>
+
+            </div>
+
+
+            <div class="prepare-card">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <h3>Important Documents</h3>
+
+                <p>
+                    Keep copies of important identification
+                    and emergency documents.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EMERGENCY ================= -->
+
+    <section id="emergency" class="emergency">
+
+        <div class="emergency-content">
+
+            <i class="fa-solid fa-phone-volume emergency-main-icon"></i>
+
+            <h2>Emergency Response</h2>
+
+            <p>
+                During an emergency, stay calm and follow
+                instructions from local authorities.
+            </p>
+
+
+            <div class="emergency-items">
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Emergency</span>
+                    <strong>112</strong>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-truck-medical"></i>
+                    <span>Ambulance</span>
+                    <strong>108</strong>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-fire-extinguisher"></i>
+                    <span>Fire Service</span>
+                    <strong>101</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-icons">
+
+            <i class="fa-solid fa-shield-heart"></i>
+            <i class="fa-solid fa-house-medical"></i>
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <i class="fa-solid fa-people-arrows"></i>
+            <i class="fa-solid fa-life-ring"></i>
+
+        </div>
+
+        <p>
+            © 2026 DisasterCare | Disaster Management Assignment
+        </p>
+
+        <p>
+            Stay Alert • Stay Prepared • Stay Safe
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
